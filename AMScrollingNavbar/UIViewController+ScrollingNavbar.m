@@ -111,7 +111,6 @@
     CGRect frame = self.navigationController.navigationBar.frame;
     frame.origin = CGPointZero;
     self.overlay = [[UIView alloc] initWithFrame:frame];
-    
     if (self.navigationController.navigationBar.barTintColor) {
         [self.overlay setBackgroundColor:self.navigationController.navigationBar.barTintColor];
     } else if ([UINavigationBar appearance].barTintColor) {
@@ -504,6 +503,8 @@
 
 - (void)updateNavbarAlpha:(CGFloat)delta
 {
+    /** do not change navbar transparency for now
+    
     CGRect frame = self.navigationController.navigationBar.frame;
     
     if (self.scrollableView != nil) {
@@ -523,6 +524,7 @@
     self.navigationItem.rightBarButtonItem.customView.alpha = alpha;
     self.navigationItem.titleView.alpha = alpha;
     self.navigationController.navigationBar.tintColor = [self.navigationController.navigationBar.tintColor colorWithAlphaComponent:alpha];
+    **/
 }
 
 @end
