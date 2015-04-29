@@ -496,7 +496,10 @@
     [self.view setNeedsLayout];
 }
 
-- (void)updateNavbarAlpha:(CGFloat)delta {
+- (void)updateNavbarAlpha:(CGFloat)delta
+{
+    /** do not change navbar transparency for now
+    
     CGRect frame = self.navigationController.navigationBar.frame;
 
     // Change the alpha channel of every item on the navbr. The overlay will appear, while the other objects will disappear, and vice versa
@@ -512,6 +515,7 @@
     self.navigationItem.rightBarButtonItem.customView.alpha = alpha;
     self.navigationItem.titleView.alpha = alpha;
     self.navigationController.navigationBar.tintColor = [self.navigationController.navigationBar.tintColor colorWithAlphaComponent:alpha];
+    **/
 }
 
 @end
